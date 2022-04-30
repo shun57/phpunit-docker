@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  php:
+    build: ./ # Dockerfileの場所でビルドするため
+    container_name: phpunit
+    tty: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+
